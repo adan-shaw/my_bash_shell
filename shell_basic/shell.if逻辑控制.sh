@@ -188,6 +188,29 @@ if [ ! -e "/home/adan/file" ]; then
 fi
 
 
+
+#
+# 与或非
+#
+# 非[ ! ]
+if ! false;then
+	echo "hello 非"
+fi
+
+# 与[ -a ] -- and
+if [ true -a true ];then
+	echo "hello 与"
+fi
+
+# 或[ -o ] -- or
+if [ true -o false ];then
+	echo "hello 或1"
+fi
+if [ false -o true ];then
+	echo "hello 或2"
+fi
+
+
 ######################以上都是"#!/bin/sh"通用posix shell 标准#################
 
 
