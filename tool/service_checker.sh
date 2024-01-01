@@ -147,7 +147,7 @@ old_way_check_service_son() {
 	return $RETURN_FLASE
 }
 
-# 自定义的service 检查例程, 主要描述检查之后的操作, 重启, 跳过, 正常=不操作？？
+# 自定义的service 检查例程, 主要描述检查之后的操作, 重启, 跳过, 正常=不操作??
 # 参数错误: 直接终止
 # service name 错误, 可以return"1", 也可以返回"0" 方便调试
 # 其他都返回"0", 表示绝对正确
@@ -273,7 +273,7 @@ new_way_check_service_son() {
 	return $RETURN_FLASE
 }
 
-# 自定义的service 检查例程, 主要描述检查之后的操作, 重启, 跳过, 正常=不操作？？
+# 自定义的service 检查例程, 主要描述检查之后的操作, 重启, 跳过, 正常=不操作??
 # 参数错误: 直接终止
 # service name 错误, 可以return"1", 也可以返回"0" 方便调试
 # 其他都返回"0", 表示绝对正确

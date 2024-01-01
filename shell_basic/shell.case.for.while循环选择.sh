@@ -60,7 +60,7 @@ esac
 #
 # 字符串-子集 + 随意插入的字符串(打乱测试)
 # 字符串之间, 会自动根据' '空格来划分字符串(空格默认是分隔符号)
-str="i'm a asshole !!"
+str="i'm a idiot !!"
 for i in "f***you" "f***er" $str
 do
 	echo $i
@@ -118,7 +118,7 @@ done
 recursion() {
 	tmp=$(($1+1))
 	if [ $tmp -lt 100 ];then
-		echo "fuck you $tmp"
+		echo "love you $tmp"
 		recursion $tmp
 	fi
 	return $tmp
@@ -133,7 +133,7 @@ recursion2() {
 	global_count=$(($global_count+1))
 	if [ $global_count -lt 100 ]
 	then
-		echo "fuck you2 $global_count"
+		echo "love you2 $global_count"
 		recursion2
 	fi
 	return $global_count

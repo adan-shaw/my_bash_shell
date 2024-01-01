@@ -30,9 +30,9 @@
 
 
 #
-# 1.正常执行, 会自动阻塞'当前父进程', 在这种模式下, 显得傻逼！！
+# 1.正常执行, 会自动阻塞'当前父进程', 在这种模式下, 显得傻逼!!
 #
-# 什么是‘直接执行shell命令(相当于fork)’ 的方式??
+# 什么是'直接执行shell命令(相当于fork)' 的方式??
 # 正确写法1:
 echo_return=$(ping 127.0.0.1 -c 4)
 # 正确写法2:
@@ -59,7 +59,7 @@ echo -e "直接执行shell命令2 return:\n$func_return"
 # 2.非阻塞!! 后台执行!!
 #
 # 误区!! 只要你echo_return=$(子进程语句), 这样父进程就会阻塞!! 
-# 从而等待‘子进程的所有echo/printf回显输出’, 因此这样做肯定是阻塞的!!
+# 从而等待'子进程的所有echo/printf回显输出', 因此这样做肯定是阻塞的!!
 # 想要非阻塞, 应该不能: echo_return=$(子进程语句)
 # 而是要直接: $(子进程语句) > $tmpfs, 将结果全部打印到tmpfs 内存分区上(保存到tmpfs上的文件)
 # 然后再分析'tmpfs上的文件'的echo/printf回显结果.
@@ -72,7 +72,7 @@ echo $echo_return
 echo -e "直接执行shell命令1 return:\n$func_return"
 
 # 误区2:
-# 注意: $() > /dev/null; 只能消灭‘echo/printf回显’, 不能非阻塞执行shell子进程!!
+# 注意: $() > /dev/null; 只能消灭'echo/printf回显', 不能非阻塞执行shell子进程!!
 #      想要非阻塞, 必须使用 & , 而且还不能用变量'接住'echo/printf回显!!
 echo "非阻塞-误区2"
 ping 127.0.0.88 -c 4 > /dev/null

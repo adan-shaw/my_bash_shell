@@ -78,7 +78,7 @@ func_test() {
 #      shell 执行函数肯定是阻塞的, 如果弹到后台执行函数, 即新建一个子进程去执行该函数.
 echo -e "\n\nwait正确用法:(想要获取函数的结果, 只能阻塞等待了, 或者 > tmpfs.)"
 func_test "123"
-echo "func_test() return: $?(非‘&’后台运行函数, 前台阻塞执行函数, 不使用wait)"
+echo "func_test() return: $?(非'&'后台运行函数, 前台阻塞执行函数, 不使用wait)"
 
 
 
@@ -91,20 +91,20 @@ exit 0
 #####################################################################错误!!
 # wait错误用法1(后台):
 func_test "123" &
-echo "func_test() return: $?(‘&’ 后台运行函数, 不用wait)"
+echo "func_test() return: $?('&' 后台运行函数, 不用wait)"
 wait
 # 这里会丢失$?, 因为上一个函数, 是命令wait !! 所以这里总是等于0
-echo "func_test() return: $?(‘&’ 后台运行函数, 使用wait)"
+echo "func_test() return: $?('&' 后台运行函数, 使用wait)"
 
 # wait错误用法2(后台):
 func_test "123" &
 wait
-echo "func_test() return: $?(‘&’ 后台运行函数, 使用wait)"
+echo "func_test() return: $?('&' 后台运行函数, 使用wait)"
 
 # wait错误用法3(前台):
 func_test "123"
 wait
-echo "func_test() return: $?(非‘&’后台运行函数, 前台阻塞执行函数, 使用wait)"
+echo "func_test() return: $?(非'&'后台运行函数, 前台阻塞执行函数, 使用wait)"
 #####################################################################错误!!
 
 

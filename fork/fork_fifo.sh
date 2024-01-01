@@ -42,10 +42,10 @@ rm $FIFO_FILE
 
 
 PROCESS_NUM=4 # 最大进程数
-# 向'fd6'中输入'$PROCESS_NUM'个字符串'fuck'
+# 向'fd6'中输入'$PROCESS_NUM'个字符串'love'
 for ((idx=0;idx<$PROCESS_NUM;idx++));
 do
-  echo "fuck"
+  echo "love"
 done >&6 
 
 

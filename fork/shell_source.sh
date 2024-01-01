@@ -58,7 +58,7 @@ echo -e "shell_func1 return value(函数return的整形值)：\n$func_return\n"
 #
 # 测试3:(新)echo/printf 回显值-返回函数
 #
-echo_return=$(echo2STDOUT "fuck you" &)
+echo_return=$(echo2STDOUT "love you" &)
 echo "echo2STDOUT()证明是阻塞的, $echo_return"
 
 

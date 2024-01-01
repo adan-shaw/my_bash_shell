@@ -39,17 +39,17 @@ time_name=$(date "+%Y%m%d%H%M%S")
 
 
 #
-#***1.定义‘字符串变量’(只要有"双引号" or '单引号'创建的变量, 都是字符串变量!!)
+#***1.定义'字符串变量'(只要有"双引号" or '单引号'创建的变量, 都是字符串变量!!)
 #
-str1="fuck you"
+str1="love you"
 str2="8086"
 str3='!@#$%'
 
-# ‘字符串变量’的引用
+# '字符串变量'的引用
 echo $str1
 echo $str1 $str2 $str3
-echo "Fuck you $str2 $str3"
-echo 'Fuck you again $str2 $str3'
+echo "love you $str2 $str3"
+echo 'love you again $str2 $str3'
 
 # 字符串变量合并(在'无shell系统命令'语句, 纯字符串的情况, 可以这么用)
 str4=$str1$str2$str3
@@ -58,7 +58,7 @@ echo $str4
 
 
 #
-#***2.定义‘数字变量’
+#***2.定义'数字变量'
 #
 # (shell没有数字,数字变量实际上还是字符串,但你可以让'数字-字符串'进行计算;
 #  shell 中不能存在小数点, 没有浮点数!! <除法需谨慎!! 负数可以有!!>)
@@ -195,7 +195,7 @@ tmp=$(env | grep PATH)
 echo -e "\n含有PATH关键字的环境变量有:\n$tmp"
 
 #3.export 导入新的环境变量(重启会自动失效)
-export ADAN="fuck you"
+export ADAN="love you"
 echo "查看新设置的环境变量ADAN: $ADAN"
 
 #4.查看几个常用的环境变量:

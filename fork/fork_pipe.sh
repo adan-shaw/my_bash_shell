@@ -64,10 +64,10 @@ sleep 1
 echo -e "\n\n\n"
 
 #显示两行:
-#fuck you
-#fuck you again
+#love you
+#love you again
 #选中: again 行
-echo_return=$(triple_echo "fuck you" | grep "again")
+echo_return=$(triple_echo "love you" | grep "again")
 echo "func_return=$?, echo_return=$echo_return"
 
 
@@ -80,7 +80,7 @@ echo "func_return=$?, echo_return=$echo_return"
 recursion() {
 	tmp=$(($1+1))
 	if [ $tmp -lt 100 ];then
-		echo "fuck you $tmp"
+		echo "love you $tmp"
 		recursion $tmp
 	fi
 	return $tmp
@@ -95,7 +95,7 @@ recursion2() {
 	global_count=$(($global_count+1))
 	if [ $global_count -lt 100 ]
 	then
-		echo "fuck you2 $global_count"
+		echo "love you2 $global_count"
 		recursion2
 	fi
 	return $global_count

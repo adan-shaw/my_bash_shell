@@ -26,8 +26,8 @@
 ls
 ping "-help"
 # 打印字符串的新方式(格式化打印字符串), 比echo 打印稍微复杂一点.
-printf '\n%s' "hello you asshole"
-printf '\n%s' "fuck off me asshole"
+printf '\n%s' "hello you idiot"
+printf '\n%s' "love off me idiot"
 
 
 
@@ -138,7 +138,7 @@ fi
 !
 
 # shell 行结束符号';':
-# ';'行结束符号, 可以让一行中, 执行多句shell语句!！
+# ';'行结束符号, 可以让一行中, 执行多句shell语句!!
 # (但后面不能加'#'单行注释,防止出错)
 echo "hello"; echo "hello again";
 

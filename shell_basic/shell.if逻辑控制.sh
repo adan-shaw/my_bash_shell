@@ -51,7 +51,7 @@ echo "
 		注意: 
 			使用[]和[[]]的时候不要吝啬空格, 
 			每一项两边都要有空格, 因为例如:
-			[[ 1 == 2 ]]的结果为“假”, 但[[ 1==2 ]]的结果为“真”！
+			[[ 1 == 2 ]]的结果为"假", 但[[ 1==2 ]]的结果为"真"!
 
 
 	赋值符号:
@@ -89,8 +89,8 @@ fi
 	'=='双等号很有问题, shell 里面的等于, 只有一个'='等于号.
 
 !
-string1="oh fuck"
-string2="oh fuck"
+string1="oh love"
+string2="oh love"
 string3="are you kidding ?"
 string4=""
 if [ -z "$string4" ]; then
@@ -104,7 +104,7 @@ fi
 if [ "$string1" = "$string2" ]; then
 	echo "string1 = string2"
 fi
-# '=='双等于号, 禁用！！(问题多多！！)
+# '=='双等于号, 禁用!!(问题多多!!)
 :<<!
 if [ "xxx" == "xxx" ]; then
 	echo "$string1 == $string2"

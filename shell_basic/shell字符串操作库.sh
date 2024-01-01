@@ -21,20 +21,20 @@
 
 
 #
-#***1.定义‘字符串变量’
+#***1.定义'字符串变量'
 #
 # 只要有"双引号" or '单引号'创建的变量, 都是字符串变量!! 
 # 但'单引号'有些特殊!! 详情看2: 单引号与双引号的区别
 # $() = ``(单斜点), 用来执行命令, 获取echo 回显字符串结果.
-str1="fuck you"
+str1="love you"
 str2="8086"
 str3='!@#$%'
 
-# ‘字符串变量’的引用
+# '字符串变量'的引用
 echo $str1
 echo $str1 $str2 $str3
-echo "Fuck you $str2 $str3"
-echo 'Fuck you again $str2 $str3'
+echo "love you $str2 $str3"
+echo 'love you again $str2 $str3'
 
 # 字符串变量合并(在'无shell系统命令'语句, 纯字符串的情况, 可以这么用)
 str4=$str1$str2$str3
@@ -47,7 +47,7 @@ echo $str4
 #
 # 2.单引号与双引号的区别:
 #
-str_tmp="fuck you"
+str_tmp="love you"
 tmp='$str_tmp "" '' '' \\ // '
 echo $tmp
 # 双引号, 可以引用变量!! 单引号中没有任何变量!!
@@ -65,7 +65,7 @@ tmp=$("ls \"/home/adan/$str_tmp\"");
 # 3.查找一个字符串是否存在'目标子字符串'
 #
 
-# 方法一: 利用grep查找(消耗大一点), 但标准posix 可用！！
+# 方法一: 利用grep查找(消耗大一点), 但标准posix 可用!!
 str="long stringx "
 str_son="string"
 tmp=$(echo $str | grep "${str_son}")
@@ -100,7 +100,7 @@ else
 fi
 
 
-# 方法四: 利用case in 语句-匹配字符串. why ? 标准posix 可用！！
+# 方法四: 利用case in 语句-匹配字符串. why ? 标准posix 可用!!
 str="1 2 3 4 5 6 7"
 str_son="1 7"
 case $str in
